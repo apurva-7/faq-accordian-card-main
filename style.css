@@ -1,0 +1,158 @@
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Roboto", sans-serif;
+	font-size: 12px;
+	background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: hsl(237, 12%, 33%);
+}
+
+.hidden {
+	display: none;
+}
+
+.card {
+	background-color: white;
+	border-radius: 1rem;
+	max-width: 400px;
+	min-width: 320px;
+	margin: auto;
+	min-height: 500px;
+	background-image: url(./images/bg-pattern-mobile.svg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	margin-top: 150px;
+	margin-left: 30px;
+	margin-right: 30px;
+	padding-bottom: 50px;
+}
+.card-image img {
+	max-width: 250px;
+	width: 100%;
+	height: auto;
+	position: absolute;
+	transform: translateY(-20px);
+}
+
+.card-image {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.card-text {
+	padding-top: 50px;
+	padding-left: 20px;
+	padding-right: 20px;
+	line-height: 1.5;
+}
+
+.accordian-question {
+	border: 0;
+	background-color: white;
+	color: inherit;
+	font-family: "Roboto", sans-serif;
+	font-size: 0.857rem;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	width: 100%;
+	text-align: left;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.accordian-collapse {
+	font-size: 0.75rem;
+	padding-bottom: 10px;
+	border-bottom: solid 1px hsl(240, 5%, 91%);
+}
+
+.accordian-question::after {
+	display: block;
+	width: 10px;
+	height: 10px;
+	content: "";
+	background-image: url(./images/icon-arrow-down.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center center;
+}
+
+.card-box {
+	display: none;
+}
+
+h1 {
+	font-size: 1.8rem;
+	padding-top: 80px;
+	padding-bottom: 30px;
+	text-align: center;
+}
+
+.accordian-question:hover {
+	color: hsl(14, 88%, 65%);
+}
+
+@media (min-width: 1000px) {
+	.card {
+		display: flex;
+		position: relative;
+		background-image: url(./images/bg-pattern-desktop.svg);
+		background-size: 99%;
+		background-repeat: no-repeat;
+		background-position: -6380% 61%;
+		max-width: 900px;
+	}
+
+	.card-image {
+		width: 450px;
+		overflow: hidden;
+	}
+
+	.card-image img {
+		position: inherit;
+		max-width: 400px;
+		width: 100%;
+		height: auto;
+		transform: translateX(-6rem);
+		overflow: hidden;
+	}
+
+	.card-box {
+		display: block;
+		position: absolute;
+		top: 38%;
+		right: 92%;
+		z-index: 1000;
+	}
+
+	.card-text {
+		width: 450px;
+		padding-right: 50px;
+		font-size: 0.875rem;
+		padding-top: 0px;
+	}
+
+	h1 {
+		text-align: left;
+	}
+}
